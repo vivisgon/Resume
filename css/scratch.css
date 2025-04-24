@@ -1,0 +1,51 @@
+body {
+  margin:0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgb(212, 247, 221);
+  padding:10px;
+  color:rgb(250, 36, 36);
+  align-content: center;
+}
+
+.header{
+  color:beige;
+  font-style: oblique;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.generator{
+  color:rgb(19, 86, 63);
+  font-weight: lighter;
+  font-family:'Courier New', Courier, monospace;
+  text-align:center;
+}
+
+.text{
+  color:rgb(13, 129, 90);
+  font-display: fallback;
+}
+
+.resume{
+  color:rgba(41, 61, 11, 0.947);
+}
+
+a {
+  color: #007bff; /* Primary link color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3; /* Darker link color on hover */
+}
+
+/* Layout and Spacing */
+.container {
+  max-width: 960px; /* Common maximum width for content */
+  margin: 0 auto; /* Center the content */
+  padding: 20px;
+  background-color: #f0c0c0; /* White container background */
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}

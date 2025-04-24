@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>No Sabo Words Generator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff8e1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #e65100;
+      margin-bottom: 20px;
+    }
+
+    #word {
+      background-color: #fff3e0;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #fb8c00;
+    }
+
+    .translation {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>No Sabo Word Generator</h1>
+  <div id="word">Click the button to learn a "no sabo" word!</div>
+  <button onclick="generateWord()">¡Dame uno!</button>
+
+  <script>
+    const noSaboWords = [
+      { word: "No sabo", correct: "No sé" },
+      { word: "Yo no me recuerdo", correct: "No me acuerdo" },
+      { word: "Parquear", correct: "Estacionar" },
+      { word: "Mochate", correct: "Comparte / Dame un poco" },
+      { word: "Traqueteando", correct: "Haciendo cosas / trabajando" },
+      { word: "Lonche", correct: "Almuerzo" },
+      { word: "Watchear", correct: "Mirar / Ver" },
+      { word: "Aplicar para un trabajo", correct: "Solicitar un trabajo" },
+      { word: "Rentar un carro", correct: "Alquilar un carro" },
+      { word: "Mapear el piso", correct: "Trapear el piso" },
+      { word: "Comprar un ticket", correct: "Comprar una entrada / boleto" },
+      { word: "Chequealo", correct: "Revísalo / Míralo" },
+      { word: "Escribe me", correct: "Escríbeme" },
+      { word: "Texteame", correct: "Mándame un mensaje" },
+    ];
+
+    function generateWord() {
+      const random = noSaboWords[Math.floor(Math.random() * noSaboWords.length)];
+      document.getElementById('word').innerHTML = `
+        <strong>"${random.word}"</strong><br>
+        <div class="translation">✅ Correct way: <em>${random.correct}</em></div>
+      `;
+    }
+
+    // Generate one on load
+    generateWord();
+  </script>
+
+</body>
+</html>
